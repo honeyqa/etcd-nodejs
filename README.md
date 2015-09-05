@@ -1,2 +1,2 @@
 # etcd-nodejs
-etcd for node.js
+Etcd for Node.js
