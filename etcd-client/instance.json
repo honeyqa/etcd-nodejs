@@ -1,0 +1,19 @@
+{
+  "server":{
+    "server_1":{
+        "key":"/frontends/server_1",
+        "value":"node ../sample-server/server_1",
+        "ttl":5
+      },
+    "server_2":{
+        "key":"/frontends/server_2",
+        "value":"node ../sample-server/server_2",
+        "ttl":5
+      },
+    "server_3":{
+        "key":"/frontends/server_3",
+        "value":"node ../sample-server/server_3",
+        "ttl":5
+    }
+  }
+}
