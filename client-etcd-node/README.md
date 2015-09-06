@@ -1,21 +1,11 @@
 
-# etcd-node
-
-An alternative client library for interacting with etcd from node.js (without coffeescrpt). If you don't mind having coffeescript dependencies, [there is already is a module for that](https://github.com/stianeikeland/node-etcd).
-
-## Notice
-
-This is not stable at all! I am writing this module as I learn more about [etcd](http://coreos.com/docs/guides/etcd/), feel free to [help](https://github.com/gjohnson/etcd-node/issues)!
-
-## Install
+## 설치
 
 ```sh
 $ npm install etcd
 ```
 
-## Configuring.
-
-I made the client a singleton for the time being (up for suggestions). If you need to set `host` or `port`, use the `configure` method.
+## 설정.
 
 ```js
 var etcd = require('etcd');
@@ -25,12 +15,7 @@ etcd.configure({
   port: 40001
 });
 ```
-
-*NOTE: I still need to add SSL support.*
-
 ## Commands
-
-I am still implementing commands, but here is what we have so far:
 
 ### .set(string, mixed, [options], [callback])
 
@@ -40,7 +25,7 @@ etcd.set('hello', 'world', function (err) {
 });
 ```
 
-Set with a TTL:
+TTL 설정:
 
 ```js
 etcd.set('hello', 'world', { ttl: 5 }, function (err) {
@@ -48,7 +33,7 @@ etcd.set('hello', 'world', { ttl: 5 }, function (err) {
 });
 ```
 
-Set using a "setAndTest":
+"setAndTest":
 
 ```js
 etcd.set('hello', 'world', { prev: 'world' }, function (err) {
@@ -104,11 +89,3 @@ etcd.leader(function (err, host) {
   if (err) throw err;
 });
 ```
-
-## TODO
-
-  - encoding (json|string)
-
-## License
-
-MIT
