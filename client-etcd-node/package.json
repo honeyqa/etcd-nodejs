@@ -1,0 +1,29 @@
+{
+  "name": "etcd",
+  "version": "0.0.1",
+  "description": "etcd client for node",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "etcd",
+    "coreos",
+    "raft"
+  ],
+  "author": "Minwoo Jung",
+  "license": "MIT"
+  ,
+  "dependencies": {
+    "superagent": "~0.15.5",
+    "debug": "~0.7.2"
+  },
+  "devDependencies": {
+    "should": "~2.0.1",
+    "mocha": "~1.13.0"
+  }
+}
