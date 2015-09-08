@@ -1,0 +1,10 @@
+{
+  "mysql":
+  	{
+	    "mysql_1":
+	    {
+	      "key":"/mysql/mysql_1",
+	      "value":"mysql -u root -pskfk1224"
+    	}
+  	}
+}
