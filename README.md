@@ -1,30 +1,13 @@
-# Title
-## Intro.
-
+# etcd Study
 
 ## [etcd](https://coreos.com/etcd/docs/latest/getting-started-with-etcd.html)
-### etcd란
 
 1. simple interface
 2. key/value starage
 3. watch for changes
 
 ### Install
-
-***OSX***
-
-    $ curl -L  https://github.com/coreos/etcd/releases/download/v2.1.3/etcd-v2.1.3-darwin-amd64.zip -o etcd-v2.1.3-darwin-amd64.zip
-    $ unzip etcd-v2.1.3-darwin-amd64.zip
-    $ cd etcd-v2.1.3-darwin-amd64 
-    $ ./etcd
-Open another terminal:
-
-    $ ./etcdctl set mykey "this is awesome"
-    this is awesome
-    $ ./etcdctl get mykey
-    this is awesome
-
-***OSX Homebrew***
+**_OSX Homebrew_**
 
     $ brew install etcd
     $ etcd
@@ -35,8 +18,6 @@ Open another terminal:
     this is awesome
     $ etcdctl get mykey
     this is awesome
-
-
 
 ## [node-etcd](https://www.npmjs.com/package/node-etcd)
 
@@ -103,11 +84,7 @@ Use the ```.watch()``` command in you need more direct control.
 ## REFERENCE
 
 * [coreos-etcd-api](https://coreos.com/etcd/docs/latest/api.html)
-
 * [coreos-etcd-git](https://github.com/coreos/etcd/tree/master/etcdctl)
-
 * [etcd-tutorials](https://www.digitalocean.com/community/tutorials/how-to-use-etcdctl-and-etcd-coreos-s-distributed-key-value-store)
-
-* [soma6th-git](https://github.com/swmaestro6th-crashreport/nodejs-etcd-mongodb)
-
+* [swmaestro6th-crashreport/nodejs-etcd-mongodb](https://github.com/swmaestro6th-crashreport/nodejs-etcd-mongodb)
 * [soma6th-slideshare](http://www.slideshare.net/parkdainel/etcd-db-watcher?qid=cd557011-f6f6-474c-b5d0-69fecc711b87&v=default&b=&from_search=1)
