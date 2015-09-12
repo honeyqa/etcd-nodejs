@@ -1,6 +1,6 @@
 # etcd Study
 
-## [etcd](https://coreos.com/etcd/docs/latest/getting-started-with-etcd.html)
+## [etcd](https://github.com/coreos/etcd)
 
 1. simple interface
 2. key/value starage
@@ -11,13 +11,6 @@
 
     $ brew install etcd
     $ etcd
-    
-Open another terminal:
-
-    $ etcdctl set mykey "this is awesome"
-    this is awesome
-    $ etcdctl get mykey
-    this is awesome
 
 ## etcd library for nodejs
 * [stianeikeland/node-etcd](https://www.npmjs.com/package/node-etcd)
