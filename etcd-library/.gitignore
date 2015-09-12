@@ -1,6 +1,0 @@
-node_modules
-lib-cov
-tmp
-coverage.html
-*.log
-*.tern-port

@@ -19,19 +19,11 @@ Open another terminal:
     $ etcdctl get mykey
     this is awesome
 
-## [node-etcd](https://www.npmjs.com/package/node-etcd)
-
-[Library fork](https://github.com/honeyqa/etcd-study/tree/master/etcd-library)
-
-### Install
-
-For nodejs >= 0.10 and iojs:
-
-    $ npm install node-etcd
-
-For nodejs == 0.8:
-
-    $ npm install node-etcd@3.0.2
+## etcd library for nodejs
+* [stianeikeland/node-etcd](https://www.npmjs.com/package/node-etcd)
+	* [repository](https://github.com/stianeikeland/node-etcd) 
+* [gjohnson/etcd-node](https://www.npmjs.com/package/etcd)
+	* [repository](https://github.com/gjohnson/etcd-node) 
 
 ## node.js / MySQL Auto-Recovery System
 
