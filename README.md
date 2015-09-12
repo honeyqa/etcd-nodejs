@@ -21,6 +21,8 @@ Open another terminal:
 
 ## [node-etcd](https://www.npmjs.com/package/node-etcd)
 
+[Library fork](https://github.com/honeyqa/etcd-study/tree/master/etcd-library)
+
 ### Install
 
 For nodejs >= 0.10 and iojs:
@@ -31,55 +33,11 @@ For nodejs == 0.8:
 
     $ npm install node-etcd@3.0.2
 
-### Methods
-**Basic usage**
+## node.js / MySQL Auto-Recovery System
 
-    Etcd = require('node-etcd');
-    etcd = new Etcd();
-    etcd.set('key', 'value');
-    etcd.get('key', console.log);
-    etcd.del('key', console.log);
-
-**.set(key, value, [options], [callback])**
-
-    etcd.set('key', 'value', {ttl: 5}, console.log);
-
-* ```ttl``` (time to live in seconds)
-
-**.create(path, value, [options], [callback])**
-
-Atomically create in-order keys.
-
-    etcd.create('queue', 'first');
-    etcd.create('queue', 'next', console.log);
-    
-**.watcher(key, [index], [options])**
-
-Returns an eventemitter for watching for changes on a key
-
-    watcher = etcd.watcher('key');
-    watcher.on('change', console.log); // Triggers on all changes
-    
-You can cancel a watcher by calling ```.stop()```.
-
-Signals:
-
-* ```change``` - emitted on value change
-* ```reconnect``` - emitted on reconnect
-* ```error``` - emitted on invalid content
-* ```<etcd action>``` - the etcd action that triggered the watcher (ex: set, delete, expire).
-* ```stop``` - watcher was canceled.
-* ```resync``` - watcher lost sync (server cleared and outdated the index).
-
-Use the ```.watch()``` command in you need more direct control.
-
-## Node.js and MySQL for Auto-Recovery System
-
-3. get 
-4. watcher instance
-5. etcd 초기화(setup, notify, connect)
-6. watcher 작성
-7. test
+### study
+* [etcd-sample](https://github.com/honeyqa/etcd-study/tree/master/etcd-sample)
+* [etcd-test/mysql_watcher](https://github.com/honeyqa/etcd-study/tree/master/etcd-test/mysql_watcher)
 
 ## REFERENCE
 
@@ -87,4 +45,4 @@ Use the ```.watch()``` command in you need more direct control.
 * [coreos-etcd-git](https://github.com/coreos/etcd/tree/master/etcdctl)
 * [etcd-tutorials](https://www.digitalocean.com/community/tutorials/how-to-use-etcdctl-and-etcd-coreos-s-distributed-key-value-store)
 * [swmaestro6th-crashreport/nodejs-etcd-mongodb](https://github.com/swmaestro6th-crashreport/nodejs-etcd-mongodb)
-* [soma6th-slideshare](http://www.slideshare.net/parkdainel/etcd-db-watcher?qid=cd557011-f6f6-474c-b5d0-69fecc711b87&v=default&b=&from_search=1)
+* [etcd를 이용한 DB Watcher 구현하기](http://www.slideshare.net/parkdainel/etcd-db-watcher)
