@@ -1,23 +1,29 @@
 var Etcd = require('node-etcd');
 var exec = require('child_process').exec;
+var instance = require('./instance')
 
 etcd = new Etcd();
-run_s1(false);
+for (var i in instance.server) {
+  init_instance(i);
+}
 
-watcher = etcd.watcher("server_1");
-watcher.on("delete", function(k) {
-  run_s1(true);
-});
+function init_instance(i) {
+  run_instance(false, i, instance.server[i].key, instance.server[i].value);
+  watcher = etcd.watcher(instance.server[i].key);
+  watcher.on("delete", function(k) {
+    run_instance(true, i, instance.server[i].key, instance.server[i].value);
+  });
+}
 
-function run_s1(restart) {
+function run_instance(restart, name, key, cmd) {
   if (restart) {
-    console.log("[!] restart server_1");
+    console.log("[!] restart %s", name);
   } else {
-		console.log("[!] start server_1");
-	}
-  etcd.set("server_1");
-  exec('node ../sample-server/server_1', function(err, stdout, stderr) {
+    console.log("[!] start %s", name);
+  }
+  etcd.set(key);
+  exec(cmd, function(err, stdout, stderr) {
     console.log(err);
-    etcd.del("server_1");
+    etcd.del(key);
   });
 }
