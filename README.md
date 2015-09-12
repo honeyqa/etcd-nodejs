@@ -18,7 +18,8 @@
 * [gjohnson/etcd-node](https://www.npmjs.com/package/etcd)
 	* [repository](https://github.com/gjohnson/etcd-node) 
 
-## node.js / MySQL Auto-Recovery System
+## process recovery with etcd
+* [etcd-watcher](https://github.com/honeyqa/etcd-study/tree/master/etcd-watcher)
 
 ### study
 * [etcd-sample](https://github.com/honeyqa/etcd-study/tree/master/etcd-sample)
