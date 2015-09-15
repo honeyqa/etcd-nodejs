@@ -20,10 +20,9 @@
 
 ## process recovery with etcd
 * [etcd-watcher](https://github.com/honeyqa/etcd-study/tree/master/etcd-watcher)
-
-### study
-* [etcd-sample](https://github.com/honeyqa/etcd-study/tree/master/etcd-sample)
-* [etcd-test/mysql_watcher](https://github.com/honeyqa/etcd-study/tree/master/etcd-test/mysql_watcher)
+* base study
+	* [etcd-sample](https://github.com/honeyqa/etcd-study/tree/master/etcd-sample)
+	* [etcd-test/mysql_watcher](https://github.com/honeyqa/etcd-study/tree/master/etcd-test/mysql_watcher)
 
 ## REFERENCE
 
